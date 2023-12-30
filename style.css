@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Georgia";
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.container .box{
+    height: 120vh;
+    width: 75%;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 20px;
+    display: flex;
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10,10,10,0.15)
+}
+
+.container nav {
+    height: 7%;
+    width: 90%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px auto;
+    padding: 20px;
+}
+
+.container .logo{
+    font-size: 35px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.container nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+.container nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.25s;
+}
+
+.container nav ul li:hover a::after {
+    width: 100%;
+}
+
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Updated alignment value */
+    width: 100%;
+    margin-top: 10%; /* Updated margin property */
+    padding-left: 80px;
+}
+
+
+.content .section-1{
+    position: relative;
+    width: 40%
+}
+
+.content .section-1 h1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    color: lightblue;
+}
+
+.content .section-1 h3{
+    font-size: 24px;
+    font-family: "Gil Sans";
+    color: lightblue;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.content .section-1 p{
+    font-size: 15px;
+    color: lightblue;
+    margin-bottom: 50px
+}
+
+.content .section-2 {
+    margin-top: 75px; /* Add margin-top to create space above the buttons */
+    color: lightblue;
+}
+
+.content .section-3 {
+    margin-top: 50px;
+    color: lightblue;
+    width: 100%;
+    font-family: "Gil Sans";
+}
+
+.content .section-4 {
+    margin-top: 80px;
+    color: lightblue;
+    width: 100%;
+    font-family: "Gil Sans";
+    font-size: 24px;
+}
+
+.content .btn {
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: white;
+    border: 3px solid black;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    color: black;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+.content .btn:hover{
+    background-color: white;
+    color: black;
+    font-weight: 500;
+}
+
+.side-image {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 100px; /* Adjust the margin-top as needed to control the vertical positioning */
+    margin-right: 40px; /* Adjust the margin-right to control the horizontal positioning */
+    border-radius: 50%;
+    border: 2px solid black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.side-image:hover {
+    transform: scale(1.1); /* Increases size of image by 10% */
+}

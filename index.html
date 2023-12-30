@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <nav>
+                <a href="#" class="logo">Samir</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Download CV</a></li>
+                    <li><a href="#">Download Resume</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="section-1">
+                    <h1>Hi, I'm Samir</h1>
+                    <h3 id="typing-text"></h3>
+                    <div class = "section-3">
+                        <h2>I am a second-year student at UNC Chapel Hill interested in exploring the crossroads of technology and healthcare. I aim to combine my passions for technology, humanitarian service, and medicine to innovate the world!</h2>
+                    </div>
+                    <div class = "section-4">
+                        <h4>Outside of academics, I dedicate much of my time to humanitarian relief volunteering and community service. I also enjoy playing tennis and soccer</h4>
+                    </div>
+                </div>
+                <img src="pictures/Samir Photo.jpg" class="side-image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textElement = document.getElementById("typing-text");
+            const textToType = "B.S Computer Science and Economics Student at UNC Chapel Hill";
+            let index = 0;
+
+            function type() {
+                textElement.textContent += textToType[index];
+                index++;
+
+                if (index < textToType.length) {
+                    setTimeout(type, 75); // Adjust the typing speed (milliseconds)
+                }
+            }
+
+            type();
+        });
+    </script>
+</body>
+</html>
